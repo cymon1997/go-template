@@ -10,12 +10,12 @@ Minimal project structure for building [Go](https://golang.org) application.
 - Provider based dependency injection (using singleton)
 - Config files replaceable with ENV variables 
 - Core layer separation: inbound, outbound, usecase 
+- Database migration 
+- Basic db client repository 
 
 ## TODO
 
-- Database migration 
 - Database model generator 
-- Basic db client repository 
 - Basic redis cache client repository
 - Integration test 
 
