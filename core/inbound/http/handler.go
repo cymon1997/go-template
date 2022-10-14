@@ -25,5 +25,6 @@ func New(mw middleware.Middleware, uc usecase.Usecase) Handler {
 func (h *handlerImpl) Register(engine *gin.Engine) {
 	// TODO: Register your endpoints here
 	root := engine.Group("", h.mw.AddContextID)
+	root.GET("/status", h.Status)
 	root.GET("/version", h.Version)
 }

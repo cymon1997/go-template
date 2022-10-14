@@ -25,11 +25,11 @@ func New(cfg Config) Migrator {
 	}
 	dsn, err := addSchemaTableName(cfg.DSN, cfg.SchemaTableName)
 	if err != nil {
-		log.Fatal("error parse migrator database dsn")
+		log.Fatal("error parse migrator database dsn: ", err)
 	}
 	migrator, err := migrate.New(cfg.FilePath, dsn)
 	if err != nil {
-		log.Fatal("error init migrator")
+		log.Fatal("error init migrator: ", err)
 	}
 	return &migratorImpl{
 		migrator: migrator,
