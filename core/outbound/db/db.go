@@ -1,6 +1,8 @@
 package db
 
-import "github.com/cymon1997/go-template/pkg/db"
+import (
+	"github.com/cymon1997/go-template/pkg/db"
+)
 
 type Repository interface {
 }

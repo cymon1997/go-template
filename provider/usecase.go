@@ -13,7 +13,7 @@ var (
 
 func GetUsecase() usecase.Usecase {
 	syncUc.Do(func() {
-		uc = usecase.New()
+		uc = usecase.New(GetDbRepository(), GetInstances())
 	})
 	return uc
 }

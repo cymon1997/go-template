@@ -1,9 +1,11 @@
 package db
 
 import (
+	"context"
 	"log"
 	"time"
 
+	"github.com/cymon1997/go-template/internal/ping"
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
 	"gorm.io/gorm"
@@ -11,6 +13,7 @@ import (
 
 type Client interface {
 	Instance() *gorm.DB
+	ping.Pingable
 }
 
 type clientImpl struct {
@@ -43,4 +46,12 @@ func New(cfg Config) Client {
 
 func (c *clientImpl) Instance() *gorm.DB {
 	return c.DB
+}
+
+func (c *clientImpl) Ping(_ context.Context) error {
+	db, err := c.DB.DB()
+	if err != nil {
+		return err
+	}
+	return db.Ping()
 }
