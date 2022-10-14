@@ -29,11 +29,11 @@ func New(cfg Config) Client {
 		DisableNestedTransaction: false,
 	})
 	if err != nil {
-		log.Fatal("error init database")
+		log.Fatal("error init database: ", err)
 	}
 	db, err := client.DB()
 	if err != nil {
-		log.Fatal("error connect database")
+		log.Fatal("error connect database: ", err)
 	}
 	db.SetMaxOpenConns(cfg.MaxOpenConn)
 	db.SetMaxIdleConns(cfg.MaxIdleConn)

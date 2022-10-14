@@ -24,7 +24,7 @@ func InitTimezone(tz string) {
 		var err error
 		loc, err = time.LoadLocation(tz)
 		if err != nil {
-			log.Fatal("error load db timezone")
+			log.Fatal("error load db timezone: ", err)
 		}
 	})
 }
