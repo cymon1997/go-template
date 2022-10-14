@@ -15,6 +15,8 @@ Minimal project structure for building [Go](https://golang.org) application.
 go get -u github.com/cymon1997/go-template
 ```
 
+> Don't forget to replace all import path to your project path
+
 ## Contribute
 
 ### Development
