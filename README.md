@@ -11,6 +11,14 @@ Minimal project structure for building [Go](https://golang.org) application.
 - Config files replaceable with ENV variables 
 - Core layer separation: inbound, outbound, usecase 
 
+## TODO
+
+- Database migration 
+- Database model generator 
+- Basic db client repository 
+- Basic redis cache client repository
+- Integration test 
+
 ## Installation
 
 ```bash
