@@ -1,5 +1,7 @@
 # go-template
 
+[![status](https://img.shields.io/badge/status-in%20development-green)](#development)
+
 Minimal project structure for building [Go](https://golang.org) application.
 
 ## Features
