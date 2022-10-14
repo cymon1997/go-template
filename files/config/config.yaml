@@ -1,3 +1,19 @@
 App:
   Host: "http://127.0.0.1"
   Port: 8000
+
+DB:
+  DSN: "postgres://go_template:root@127.0.0.1:15432/go_template_test?sslmode=disable"
+  Driver: "postgres"
+  MaxOpenConn: 10
+  MaxIdleConn: 10
+
+Migrator:
+  DSN: "postgres://go_template:root@127.0.0.1:15432/go_template_test?sslmode=disable"
+  SchemaTableName: "migration_schema"
+  Path: "file://files/db/migrations"
+
+Seeder:
+  DSN: "postgres://go_template:root@127.0.0.1:15432/go_template_test?sslmode=disable"
+  SchemaTableName: "seeder_schema"
+  Path: "file://files/db/seeders"
