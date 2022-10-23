@@ -15,10 +15,11 @@ func main() {
 		log.Fatal("error apply db migrations: ", err)
 	}
 
-	err = provider.GetSeeder().Up()
-	if err != nil {
-		log.Fatal("error apply db seeders: ", err)
-	}
+	// Note: uncomment if there's seeders
+	//err = provider.GetSeeder().Up()
+	//if err != nil && err != fs.ErrNotExist {
+	//	log.Fatal("error apply db seeders: ", err)
+	//}
 
 	log.Printf("serve http at %s:%d\n", cfg.App.Host, cfg.App.Port)
 	err = provider.GetHttpServer().Run(fmt.Sprintf(":%d", cfg.App.Port))

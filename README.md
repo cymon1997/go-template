@@ -12,10 +12,10 @@ Minimal project structure for building [Go](https://golang.org) application.
 - Core layer separation: inbound, outbound, usecase 
 - Database migration 
 - Basic db client repository 
+- Database model generator
 
 ## TODO
 
-- Database model generator 
 - Basic redis cache client repository
 - Integration test 
 
@@ -26,6 +26,12 @@ go get -u github.com/cymon1997/go-template
 ```
 
 > Don't forget to replace all import path to your project path
+
+### Dependencies
+
+1. Database migration: [golang-migrate](https://github.com/golang-migrate/migrate)
+2. Database model generator: [gen](https://github.com/smallnest/gen)
+3. 
 
 ## Contribute
 
