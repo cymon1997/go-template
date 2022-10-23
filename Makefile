@@ -20,6 +20,9 @@ test: lint utest
 init-infra:
 	@docker-compose up -d
 
+shutdown-infra:
+	@docker-compose down
+
 build:
 	@printf "%s %s > BUILD APP BINARY ... \n" $(NOW)
 	@go build -race -o app ./cmd/app/main.go
