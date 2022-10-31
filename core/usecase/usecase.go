@@ -11,6 +11,8 @@ import (
 type Usecase interface {
 	Status(ctx context.Context) (*spec.StatusResponse, error)
 	Version(ctx context.Context) (*spec.VersionResponse, error)
+
+	CreateSample(ctx context.Context, input spec.CreateSampleRequest) (*spec.CreateSampleResponse, error)
 }
 
 type usecaseImpl struct {

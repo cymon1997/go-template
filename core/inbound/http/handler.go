@@ -27,4 +27,7 @@ func (h *handlerImpl) Register(engine *gin.Engine) {
 	root := engine.Group("", h.mw.AddContextID)
 	root.GET("/status", h.Status)
 	root.GET("/version", h.Version)
+
+	sample := root.Group("/sample")
+	sample.POST("/", h.CreateSample)
 }
