@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/cymon1997/go-template/core/outbound/db/model"
+	"github.com/cymon1997/go-template/business/outbound/db/model"
 	"github.com/cymon1997/go-template/internal/errors"
 )
 

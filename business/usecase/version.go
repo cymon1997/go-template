@@ -3,7 +3,7 @@ package usecase
 import (
 	"context"
 
-	"github.com/cymon1997/go-template/core/inbound/http/spec"
+	"github.com/cymon1997/go-template/business/inbound/http/spec"
 )
 
 func (uc *usecaseImpl) Version(_ context.Context) (*spec.VersionResponse, error) {

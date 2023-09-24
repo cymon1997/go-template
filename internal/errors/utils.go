@@ -1,13 +1,15 @@
 package errors
 
 import (
+	"errors"
 	"net/http"
 
 	iHttp "github.com/cymon1997/go-template/internal/http"
 )
 
 func GetStatus(err error) int {
-	errs, ok := err.(*Err)
+	var errs *Err
+	ok := errors.As(err, &errs)
 	if ok {
 		return errs.Status
 	}
@@ -15,15 +17,17 @@ func GetStatus(err error) int {
 }
 
 func GetCode(err error) iHttp.Code {
-	errs, ok := err.(*Err)
+	var errs *Err
+	ok := errors.As(err, &errs)
 	if ok {
 		return errs.Code
 	}
-	return iHttp.CodeUnknown
+	return "UNKNOWN"
 }
 
 func GetMessage(err error) string {
-	errs, ok := err.(*Err)
+	var errs *Err
+	ok := errors.As(err, &errs)
 	if ok {
 		return errs.Message
 	}

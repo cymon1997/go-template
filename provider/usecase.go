@@ -3,7 +3,7 @@ package provider
 import (
 	"sync"
 
-	"github.com/cymon1997/go-template/core/usecase"
+	"github.com/cymon1997/go-template/business/usecase"
 )
 
 var (

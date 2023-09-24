@@ -3,7 +3,7 @@ package provider
 import (
 	"sync"
 
-	ob "github.com/cymon1997/go-template/core/outbound/db"
+	ob "github.com/cymon1997/go-template/business/outbound/db"
 	"github.com/cymon1997/go-template/pkg/db"
 )
 

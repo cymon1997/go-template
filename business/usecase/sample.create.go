@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/cymon1997/go-template/core/inbound/http/spec"
-	"github.com/cymon1997/go-template/core/outbound/db/model"
+	"github.com/cymon1997/go-template/business/inbound/http/spec"
+	"github.com/cymon1997/go-template/business/outbound/db/model"
 	"github.com/google/uuid"
 	"gopkg.in/guregu/null.v4"
 )

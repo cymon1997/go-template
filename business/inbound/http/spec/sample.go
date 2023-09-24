@@ -1,6 +1,6 @@
 package spec
 
-import "github.com/cymon1997/go-template/core/outbound/db/model"
+import "github.com/cymon1997/go-template/business/outbound/db/model"
 
 type CreateSampleRequest struct {
 	Sample struct {

@@ -3,7 +3,7 @@ package db
 import (
 	"context"
 
-	"github.com/cymon1997/go-template/core/outbound/db/model"
+	"github.com/cymon1997/go-template/business/outbound/db/model"
 	"github.com/cymon1997/go-template/pkg/db"
 )
 

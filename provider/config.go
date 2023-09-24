@@ -1,19 +1,29 @@
 package provider
 
 import (
+	"github.com/cymon1997/go-logger"
 	"sync"
 
-	"github.com/cymon1997/go-template/internal/config"
+	iCfg "github.com/cymon1997/go-template/internal/config"
+	"github.com/cymon1997/go-template/pkg/config"
+	"github.com/cymon1997/go-template/pkg/utils"
 )
 
 var (
-	mainConfig     *config.MainConfig
+	mainConfig     *iCfg.MainConfig
 	syncMainConfig sync.Once
 )
 
-func GetMainConfig() *config.MainConfig {
+func GetMainConfig() *iCfg.MainConfig {
 	syncMainConfig.Do(func() {
-		mainConfig = config.New()
+		err := config.New(&mainConfig, config.Param{
+			Name:   "config",
+			Path:   utils.GetRootPath() + iCfg.FilePath,
+			Prefix: "",
+		})
+		if err != nil {
+			logger.Fatal("error load config: ", err)
+		}
 	})
 	return mainConfig
 }

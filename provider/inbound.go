@@ -3,7 +3,7 @@ package provider
 import (
 	"sync"
 
-	"github.com/cymon1997/go-template/core/inbound/http"
+	"github.com/cymon1997/go-template/business/inbound/http"
 )
 
 var (
